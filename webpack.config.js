@@ -7,6 +7,12 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'app.js'
     },
+    devServer: {
+        contentBase: './dist',
+        // protocol: 'http://',
+        // host: 'www.cuijian.com',
+        port: '3000'
+    },
     module: {
         rules: [{
             test: /\.jsx$/,
@@ -24,6 +30,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            title: 'myReact',
             template: './src/index.html'
         })
     ]

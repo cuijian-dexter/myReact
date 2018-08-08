@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import BasePage from './page/basePage/basePage.jsx';
 import './index.css';
+
+
 ReactDOM.render(
-    <h1>Hello,121 world!</h1>,
+    <BasePage />,
     document.getElementById('app')
   );
