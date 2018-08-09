@@ -2,6 +2,10 @@
 body {
     // background-image: url('./img/1.jpg');
     #app {
-        font-size: 20px;
+        .jsx {
+            color: blue;
+            font-size: 30px
+        }
+        // font-size: 20px;
     }
 }
