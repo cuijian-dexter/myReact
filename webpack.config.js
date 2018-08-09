@@ -82,11 +82,11 @@ module.exports = {
         new ExtractTextPlugin('css/[name].css'),
         //公共模块
         new webpack.optimize.CommonsChunkPlugin({
-            name: "common",
+            name: "commons",
             filename: 'js/base.js'
         }),
         // 清除dist文件
         //在npm run build的时候，会自动清除dist文件夹，并生成新的dist文件夹
-        new CleanWebpackPlugin(['dist']),
+        // new CleanWebpackPlugin(['dist']),
     ]
 };

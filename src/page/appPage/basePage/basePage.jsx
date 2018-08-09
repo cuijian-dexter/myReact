@@ -1,4 +1,5 @@
 import React from 'react';
+
 class BasePage extends React.Component {
     constructor(props) {
         super(props);
@@ -8,22 +9,19 @@ class BasePage extends React.Component {
     }
 
     onClick() {
-        this.setState((prevState, prevProps) => ({
-            name: 'Helen'
-        }));
+        this.state.name = 'John';
+        this.setState({});
+        // this.setState((prevState, prevProps) => ({
+        //     name: 'Helen'
+        // }));
     }
 
     render() {
         return (
             <div>
-                <i className="fa fa-address-book"></i>
                 <h1 onClick={this.onClick}>Hello, {this.state.name}</h1>
             </div>
         );
     }
 }
-
-// BasePage.defaultProps = {
-//     name: 'Runoob'
-// };
 export default BasePage;
