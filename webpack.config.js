@@ -9,7 +9,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         // publicPath: "/dist/",
-        filename: 'js/app.js'
+        filename: 'js/app.[hash].js'
     },
     devServer: {
         // protocol: 'http://',
@@ -85,6 +85,13 @@ module.exports = {
             name: "commons",
             filename: 'js/base.js'
         }),
+        // 清除debugger和console，但未成功
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: {
+        //         drop_debugger: true,
+        //         drop_console: true
+        //     }
+        // }),
         // 清除dist文件
         //在npm run build的时候，会自动清除dist文件夹，并生成新的dist文件夹
         // new CleanWebpackPlugin(['dist']),
